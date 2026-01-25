@@ -18,7 +18,6 @@ class Solution(object):
                 continue
             if time > stack[-1]: # time of current car vs current fleet's lead (slowest) car
                 stack.append(time)
-        print(stack)
         return len(stack)
 
 
