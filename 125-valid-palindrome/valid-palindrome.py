@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         cleaned = "".join(c.lower() for c in s if c.isalnum())
-        print(cleaned)
         l = 0
         r = len(cleaned) - 1
         while l <= r:
