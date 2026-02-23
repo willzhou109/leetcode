@@ -13,28 +13,11 @@ using std::cout, std::endl;
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
-        /*int count = 0;
-        ListNode* curr = head;
-        ListNode* prev = nullptr;
-        ListNode* saved_next = nullptr; // start of the next group of k
-        while (count < k) {
-            count += 1;
-            ListNode* nxt = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = nxt;
-            if (count == k - 1) {
-                saved_next = nxt->next;
-            }
-        }
-        head->next = saved_next;
-        return prev;*/
-
-
         ListNode* start_of_group = head;
         ListNode* ret = nullptr;
         int group_count = 0; // counter for number of groups
         ListNode* start_of_prev_group = nullptr;
+
         while (start_of_group) {
             group_count += 1;
             ListNode* curr = start_of_group;
@@ -76,8 +59,7 @@ public:
                 start_of_prev_group = start_of_group; // 3
                 start_of_group = start_of_next; // 3 becomes 5
             }
-            cout << test_count << endl;
-
+            
         }
         return ret;
     }
