@@ -1,18 +1,7 @@
 class Solution {
 private:
     void backtrack(vector<int>& sortedCandidates, int target, int i, vector<int>& currCombination, int currCombinationSum, vector<vector<int>>& combinations) {
-        cout << "i = ";
-        cout << i;
-        cout << " [ ";
-        for (int val : currCombination) {
-            cout << val;
-            cout << ", ";
-        }
-        cout << "]";
-        cout << " currCombinationSum: ";
-        cout << currCombinationSum << endl;
         if (currCombinationSum == target) {
-            cout << "found" << endl;
             combinations.push_back(currCombination);
             return;
         } else if (i >= sortedCandidates.size() || currCombinationSum > target) {
