@@ -1,10 +1,8 @@
 class Solution(object):
     def backtrack(self, candidates, target, i, currCombination, currSum, combinations):
-        
         if i == len(candidates):
             return
         if currSum == target:
-            print(currCombination)
             combinations.append(list(currCombination))
             return
         elif currSum > target:
