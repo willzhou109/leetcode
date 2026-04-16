@@ -1,18 +1,6 @@
 class Solution {
 private:
     void backtrack(vector<int>& nums, vector<int>& currPerm, vector<bool>& boolVec, vector<vector<int>>& result) {
-        cout << "[";
-        for (int x : currPerm) {
-            cout << x;
-            cout << ", ";
-        }
-        cout << "] ";
-        cout << "[";
-        for (bool x : boolVec) {
-            cout << x;
-            cout << ", ";
-        }
-        cout << "]" << endl;
         if (currPerm.size() == nums.size()) {
             
             result.push_back(currPerm);
