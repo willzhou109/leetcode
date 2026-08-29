@@ -11,7 +11,7 @@ public:
         }
     }
 
-    void backtrack(vector<string> currPartition, string remaining, vector<vector<string>>& output) {
+    void backtrack(vector<string>& currPartition, string remaining, vector<vector<string>>& output) {
         if (remaining.size() == 0) {
             //cout << "adding to output" << endl;
             output.push_back(currPartition);
