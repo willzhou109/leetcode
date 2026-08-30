@@ -27,7 +27,7 @@ public:
             for (char y : currLetters) {
                 string s = {y};
                 newOutput.push_back(s);
-                printOutput(output);
+                //printOutput(output);
             }
         } else {
             
@@ -38,7 +38,7 @@ public:
                     string ys = {y};
                     s += ys;
                     newOutput.push_back(s);
-                    printOutput(newOutput);
+                    //printOutput(newOutput);
                 }
             }
         }
