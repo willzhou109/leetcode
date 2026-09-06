@@ -1,7 +1,7 @@
 class Solution {
 public:
     struct Compare {
-        bool operator()(vector<int> a, vector<int> b) {
+        bool operator()(const vector<int>& a, const vector<int>& b) {
             int da_squared = a[0] * a[0] + a[1] * a[1];
             int db_squared = b[0] * b[0] + b[1] * b[1];
             return da_squared < db_squared;
